@@ -1,0 +1,92 @@
+{
+  "$schema": "https://registry.modelcontextprotocol.io/schemas/server.json",
+  "name": "io.github.m2ai-mcp-servers/notion-mcp",
+  "displayName": "Notion MCP",
+  "version": "0.1.0",
+  "description": "Notion Integration MCP server providing AI assistants with full access to Notion workspaces. Enables Claude to search, read, create, and update pages, databases, and blocks.",
+  "author": {
+    "name": "Me, Myself Plus AI LLC"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/m2ai-mcp-servers/notion-mcp",
+  "homepage": "https://github.com/m2ai-mcp-servers/notion-mcp#readme",
+  "runtime": "node",
+  "installation": {
+    "npm": {
+      "package": "@m2ai-mcp-servers/notion-mcp"
+    }
+  },
+  "configuration": {
+    "required": [
+      {
+        "name": "NOTION_API_KEY",
+        "description": "Notion Internal Integration Token from https://www.notion.so/my-integrations"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "search",
+      "description": "Search across all pages and databases by keyword or title"
+    },
+    {
+      "name": "get_page",
+      "description": "Retrieve a page's properties and metadata"
+    },
+    {
+      "name": "create_page",
+      "description": "Create a new page in a database or as child of another page"
+    },
+    {
+      "name": "update_page",
+      "description": "Update a page's properties (not content blocks)"
+    },
+    {
+      "name": "get_page_content",
+      "description": "Retrieve all content blocks from a page"
+    },
+    {
+      "name": "append_blocks",
+      "description": "Add new content blocks to a page (supports markdown)"
+    },
+    {
+      "name": "update_block",
+      "description": "Update an existing block's content"
+    },
+    {
+      "name": "delete_block",
+      "description": "Delete (archive) a block"
+    },
+    {
+      "name": "get_database",
+      "description": "Retrieve database schema and properties"
+    },
+    {
+      "name": "query_database",
+      "description": "Query a database with filters and sorts"
+    },
+    {
+      "name": "create_database",
+      "description": "Create a new database as child of a page"
+    },
+    {
+      "name": "list_users",
+      "description": "List all users in the workspace"
+    },
+    {
+      "name": "get_user",
+      "description": "Get details about a specific user"
+    }
+  ],
+  "keywords": [
+    "notion",
+    "mcp",
+    "model-context-protocol",
+    "ai",
+    "claude",
+    "productivity",
+    "workspace",
+    "wiki",
+    "notes"
+  ]
+}
