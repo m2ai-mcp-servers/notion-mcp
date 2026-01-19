@@ -1,11 +1,11 @@
 {
-  "name": "@m2ai-mcp/notion-mcp",
-  "version": "0.1.0",
+  "name": "@m2ai-mcp/notion-advisor",
+  "version": "1.0.0",
   "description": "Notion Integration MCP server providing AI assistants with full access to Notion workspaces",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "notion-mcp": "./dist/index.js"
+    "notion-advisor": "./dist/index.js"
   },
   "scripts": {
     "build": "tsc",

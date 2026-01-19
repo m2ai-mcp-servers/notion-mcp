@@ -13,7 +13,7 @@
   "runtime": "node",
   "installation": {
     "npm": {
-      "package": "@m2ai-mcp/notion-mcp"
+      "package": "@m2ai-mcp/notion-advisor"
     }
   },
   "configuration": {

@@ -1,4 +1,4 @@
-# Notion MCP Server
+# Notion Advisor
 
 An MCP (Model Context Protocol) server that provides AI assistants with full access to Notion workspaces. Enables Claude to search, read, create, and update pages, databases, and blocks.
 
@@ -15,8 +15,12 @@ An MCP (Model Context Protocol) server that provides AI assistants with full acc
 ## Installation
 
 ```bash
-npm install
-npm run build
+npm install -g @m2ai-mcp/notion-advisor
+```
+
+Or use directly with npx (no install required):
+```bash
+npx @m2ai-mcp/notion-advisor
 ```
 
 ## Configuration
@@ -60,8 +64,23 @@ Add to your `claude_desktop_config.json`:
 {
   "mcpServers": {
     "notion": {
-      "command": "node",
-      "args": ["/path/to/notion-mcp/dist/index.js"],
+      "command": "npx",
+      "args": ["@m2ai-mcp/notion-advisor"],
+      "env": {
+        "NOTION_API_KEY": "secret_your_token_here"
+      }
+    }
+  }
+}
+```
+
+Or if installed globally:
+
+```json
+{
+  "mcpServers": {
+    "notion": {
+      "command": "notion-advisor",
       "env": {
         "NOTION_API_KEY": "secret_your_token_here"
       }
