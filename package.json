@@ -1,5 +1,5 @@
 {
-  "name": "m2ai-notion-mcp",
+  "name": "@m2ai-mcp/notion-mcp",
   "version": "0.1.0",
   "description": "Notion Integration MCP server providing AI assistants with full access to Notion workspaces",
   "main": "dist/index.js",
